@@ -3,24 +3,24 @@
 
 # --------- FLAGS AND VARIABLES --------------------
 
-CFLAGS=-O2 -nostdlib -nodefaultlibs -fno-builtin -fPIC -Wall 
+CFLAGS=-O2 -nostdlib -nodefaultlibs -fno-builtin -fPIC -Wall
 INCLUDEROOT=-I./
 
 
 
 # ---------  GENERIC MAKE RULES --------------------
 
-all: 
+all:
 	@echo "Makefile for the liballoc library."
 	@echo "Please see LICENSE for licensing information."
-	@echo 
+	@echo
 	@echo "Output should be: liballoc.a "
 	@echo "                  liballoc.so"
-	@echo 
+	@echo
 	@echo "Usage: make [ compile | clean | <platform> ] "
-	@echo 
+	@echo
 	@echo "Currently supported platforms:"
-	@echo 
+	@echo
 	@echo "      linux"
 	@echo "      linux_info"
 	@echo "      linux_debug"
@@ -30,9 +30,7 @@ all:
 
 
 clean:
-	rm -f ./*.o
-	rm -f ./*.a
-	rm -f ./*.so
+	rm -f ./*.o ./*.a ./*.so
 
 compile:
 	gcc $(INCLUDEROOT) $(CFLAGS) -static -c liballoc.c

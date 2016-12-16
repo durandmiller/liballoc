@@ -10,7 +10,7 @@ implement the library on your own system.
 2. Create the hooks that the library needs:
 
      Make a new file called "liballoc_hooks.c" (or
-	 whatever) and implement the functions detailed 
+	 whatever) and implement the functions detailed
 	 in the README and explained in "liballoc.h"
 
 	 Look at "linux.c" for an example. It implements
